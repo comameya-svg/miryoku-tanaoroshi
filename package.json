@@ -1,0 +1,11 @@
+{
+  "name": "miryoku-tanaoroshi",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/unit/*.test.mjs",
+    "coverage": "node --test --experimental-test-coverage --test-coverage-include=src/*.js --test-coverage-exclude=src/app.js --test-coverage-lines=80 --test-coverage-branches=70 --test-coverage-functions=80 tests/unit/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
