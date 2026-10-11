@@ -9,7 +9,7 @@ const SENDER_NAME = 'じゅんちゃん（横田潤一郎）';
 const Q_NAME = 'お名前';
 const Q_SESSION = '無料棚卸しセッション（30分・オンライン）を受けてみたいですか？';
 const Q_CONSENT = 'ご感想を、サミットや登壇者の紹介に使ってもよいですか？';
-const SESSION_YES = ['ぜひ受けたい', '詳しく聞いてから決めたい'];
+const SESSION_YES = ['ぜひ受けたい'];
 
 function update() {
   const form = FormApp.openById(PropertiesService.getScriptProperties().getProperty('FORM_ID'));
@@ -42,7 +42,6 @@ function update() {
   const mc = session.asMultipleChoiceItem();
   mc.setChoices([
     mc.createChoice('ぜひ受けたい', page),
-    mc.createChoice('詳しく聞いてから決めたい', page),
     mc.createChoice('今回は見送る', FormApp.PageNavigationType.SUBMIT),
   ]);
 
