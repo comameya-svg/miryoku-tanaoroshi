@@ -46,10 +46,7 @@ function update() {
     mc.createChoice('今回は見送る', FormApp.PageNavigationType.SUBMIT),
   ]);
 
-  form.setConfirmationMessage(
-    'ご回答ありがとうございました！\n' +
-    'いただいたご感想は、今後のサミットづくりに活かしてまいります。\n' +
-    'これからも、あなたの一歩を応援しています。');
+  form.setConfirmationMessage('ご回答ありがとうございます。');
 
   Logger.log('回答用URL: ' + form.getPublishedUrl());
 }
